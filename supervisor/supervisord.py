@@ -52,6 +52,9 @@ class Supervisor:
         self.options = options
         self.process_groups = {}
         self.ticks = {}
+        # start rambler code
+        self.shedules = {}
+        # end rambler code
 
     def main(self):
         if not self.options.first:

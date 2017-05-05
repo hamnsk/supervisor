@@ -171,6 +171,17 @@ class TickEvent(Event):
     def __str__(self):
         return 'when:%s' % self.when
 
+# start rambler changes
+class SheduledEvent(Event):
+    def __init__(self, when, supervisord):
+        self.when = when
+        self.supervisord = supervisord
+
+    def __str__(self):
+        return 'when:{}'.format(self.when)
+# end rambler code
+
+
 class Tick5Event(TickEvent):
     period = 5
 
